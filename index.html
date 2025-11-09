@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Ririn 🎉</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f8bbd0, #e1bee7, #b3e5fc);
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: #fff;
+      background: linear-gradient(135deg, #f48fb1, #ba68c8, #64b5f6);
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Bagian Pembukaan */
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+      color: #6a1b9a;
+      background-color: #fff2f2;
+      border-radius: 10px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* Desain tombol Ikuti Aku */
+    .btn {
+      background-color: #f48fb1;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.4em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s ease-in-out;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background-color: #ba68c8;
+      transform: scale(1.1);
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    /* Bagian Penutup */
+    .penutup {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e1bee7;
+      color: #6a1b9a;
+      border-radius: 10px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .penutup h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .penutup p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      margin: 40px auto;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .gallery h2 {
+      color: #6a1b9a;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    .mySlides img {
+      width: 100%;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f48fb1;
+      color: white;
+      font-weight: bold;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Animasi konfeti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: pink;
+      opacity: 0.7;
+      animation: fall 4s linear infinite;
+      z-index: 10;
+      top: -10px; /* Konfeti muncul dari bagian atas */
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(720deg); }
+    }
+
+    /* Efek balon */
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 60px;
+      background-color: #ff4081;
+      border-radius: 50%;
+      animation: floatBalloon 10s linear infinite;
+      z-index: 5;
+      bottom: -60px; /* Balon muncul dari bagian bawah (body) */
+    }
+
+    @keyframes floatBalloon {
+      0% { transform: translateY(100vh) translateX(0); }
+      50% { transform: translateY(0) translateX(100px); }
+      100% { transform: translateY(-100vh) translateX(-100px); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      .intro h2 {
+        font-size: 1.5em;
+      }
+
+      .intro p {
+        font-size: 1em;
+      }
+
+      .penutup h2 {
+        font-size: 1.5em;
+      }
+
+      .penutup p {
+        font-size: 1em;
+      }
+
+      .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tambahkan Elemen Audio -->
+  <audio id="background-music" autoplay loop>
+    <source src="About_You" type="audio/mp3">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <!-- Bagian Pembukaan -->
+  <section class="intro" id="pembukaan">
+    <h2>Hai Ririn! 🎉</h2>
+    <p>Di setiap senyummu, aku menemukan alasan untuk terus bersyukur.  
+    Terima kasih sudah hadir dan memberi warna di hidupku.  
+    Di usia barumu ini, semoga semua doa dan harapanmu tercapai,  
+    dan semoga aku selalu jadi bagian dari setiap kebahagiaanmu.  
+    Kamu bukan hanya indah di mataku, tapi juga di hatiku. 💖</p>
+    <button class="btn" onclick="tampilIsi()">Ikuti Aku</button>
+  </section>
+
+  <!-- Ucapan Selamat Ulang Tahun -->
+  <header id="ucapan" style="display: none;">
+    <h1>🎂 Selamat Ulang Tahun ke-19, Sayanggg! 💖</h1>
+    <p>Semoga di usia yang baru ini, segala impian dan harapanmu tercapai.  
+    Tetap menjadi pribadi yang ceria dan menginspirasi.</p>
+  </header>
+
+  <!-- Galeri Foto -->
+  <section class="gallery" id="gallery" style="display: none;">
+    <h2>✨ Kenangan Manis Kita ✨</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="foto1.jpg" alt="Foto 1">
+      </div>
+      <div class="mySlides fade">
+        <img src="foto2.jpg" alt="Foto 2">
+      </div>
+      <div class="mySlides fade">
+        <img src="foto3.jpg" alt="Foto 3">
+      </div>
+    </div>
+    <button class="btn" onclick="tampilPenutup()">Ikuti Aku</button>
+  </section>
+
+  <!-- Bagian Penutup -->
+  <section class="penutup" id="penutup" style="display: none;">
+    <h2>Semoga Selalu Bahagia 💕</h2>
+    <p>Semoga di usia yang baru ini, segala impianmu tercapai. Aku selalu mendukungmu dan berharap yang terbaik untuk perjalanan hidupmu ke depan. Jangan lupa, tetap sabar dan nikmati setiap momen bersamakuuu!😘</p>
+    <p>Selamat ulang tahun, dan semoga tahun-tahun mendatang penuh kebahagiaan Sayangg! 🎉</p>
+  </section>
+
+  <footer>
+    Semoga hari-harimu selalu bahagia, Sayanggg 💕
+  </footer>
+
+  <script>
+    // Menampilkan Ucapan Ulang Tahun
+    function tampilIsi() {
+      document.getElementById("pembukaan").style.display = "none";
+      document.getElementById("ucapan").style.display = "block";
+      document.getElementById("gallery").style.display = "block";
+    }
+
+    // Menampilkan Penutup
+    function tampilPenutup() {
+      document.getElementById("gallery").style.display = "none";
+      document.getElementById("penutup").style.display = "block";
+    }
+
+    // Slideshow otomatis
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      const slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    // Membuat balon secara acak dari bagian bawah (body)
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw'; // Acak posisi balon di sepanjang layar
+      balloon.style.animationDuration = `${Math.random() * 4 + 6}s`; // Waktu terbang balon acak
+      document.body.appendChild(balloon);
+
+      setTimeout(() => {
+        balloon.remove();
+      }, 10000); // Balon akan hilang setelah 10 detik
+    }
+
+    // Membuat balon setiap 2 detik
+    setInterval(createBalloon, 2000);
+    
+    // Membuat konfeti secara acak dari bagian atas halaman
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      const size = Math.random() * 10 + 10;
+      confetti.style.width = `${size}px`;
+      confetti.style.height = `${size}px`;
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDuration = `${Math.random() * 4 + 2}s`; // Durasi acak untuk konfeti
+      document.body.appendChild(confetti);
+
+      // Menghapus konfeti setelah animasi selesai
+      setTimeout(() => {
+        confetti.remove();
+      }, 4000);
+    }
+
+    // Membuat konfeti setiap 300ms
+    setInterval(createConfetti, 300);
+  </script>
+
+</body>
+</html>
